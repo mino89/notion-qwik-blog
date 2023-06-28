@@ -26,7 +26,7 @@ export default component$(() => {
   // useStyles$(styles);
   return (
     <>
-  
+    <h1>Notion Qwik Blog</h1>
         <Slot />
 
     </>
