@@ -34,7 +34,7 @@ export const notionClientUtils = {
 
       }
     }
-    const response = await notion.databases.query(queryOptions );
+    const response = await notion.databases.query(queryOptions);
     const responseData = response.results.map((page: any) => (
       {
         id: page.id,
@@ -58,13 +58,13 @@ export const notionClientUtils = {
       }
     }
     const response: any = await notion.databases.query(queryOptions );
+    console.log(response)
     const n2m = new NotionToMarkdown({ notionClient: notion });
-
-    const mdBlocks = await n2m.pageToMarkdown(response.results[0].id);
+    const mdBlocks = await n2m.pageToMarkdown(response.results[0].id);   
+    console.log(mdBlocks)
     const mdString = n2m.toMarkdownString(mdBlocks)
-    
     const parsedData = {
-      cover: response[0]?.cover?.external.url,
+      cover: response.results[0]?.cover?.external.url,
       title: response[0]?.properties?.Name?.title[0]?.text?.content,
       markdown: mdString.parent
     }

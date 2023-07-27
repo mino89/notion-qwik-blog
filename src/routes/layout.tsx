@@ -28,7 +28,6 @@ export default component$(() => {
     <>
     <h1>Notion Qwik Blog</h1>
         <Slot />
-
     </>
   );
 });

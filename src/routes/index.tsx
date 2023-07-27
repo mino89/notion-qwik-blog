@@ -15,9 +15,10 @@ export default component$(() => {
         onResolved={(data) => (
           <> {data.map((page) => (
             <>
+              <img src={page.cover} height={200} width={200}/>
               <h1>
-              <a href={`/${page.slug}`}>{page.title}</a>
-                </h1>
+                <a href={`/${page.slug}`}>{page.title}</a>
+              </h1>
             </>
           ))
           }

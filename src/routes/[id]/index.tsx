@@ -20,7 +20,7 @@ export default component$(() => {
         onResolved={(data) => (
         <>
           <h1>{data.title}</h1>
-          <img src={data.cover} />
+          <img src={data.cover} height={200}/>
           <Markdown content={data.markdown as string} />
         </>
         )}
